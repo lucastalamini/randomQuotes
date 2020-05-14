@@ -1,0 +1,293 @@
+/*
+============= 
+    Font 
+============= 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+/*
+============= 
+    Variables
+============= 
+*/
+
+:root {
+  /* Colors */
+  --clr-primary-1: #222831;
+  --clr-primary-2: #393e46;
+  --clr-primary-3: #00adb5;
+  --clr-primary-4: #eeeeee;
+
+  /* Fonts */
+  --ff-primary: "Oxygen", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+
+  /* Styles */
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --spacing-less: 0.15rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+============= 
+    Global Styles
+============= 
+*/
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-primary-4);
+  color: var(--clr-primary-2);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary-3);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*
+=============== 
+    Global Classes
+===============
+*/
+
+.btn {
+  font-family: var(--ff-secondary);
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: var(--spacing-less);
+  display: inline-block;
+  padding: 0.7rem 0.8rem;
+  border: 2px solid var(--clr-primary-2);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+  transition: var(--transition);
+  background: var(--clr-primary-1);
+  color: var(--clr-primary-4);
+  border: 2px solid var(--clr-primary-1);
+}
+
+/*
+=============== 
+    Nav Bar
+===============
+*/
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--clr-primary-2);
+  color: var(--clr-primary-4);
+  padding: 0.85rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 3rem;
+}
+
+.nav-links li {
+  display: flex;
+  padding-right: 2rem;
+}
+
+.nav-links li a:hover {
+  color: var(--clr-primary-4);
+}
+
+/*
+=============== 
+    Main Content
+===============
+*/
+
+main {
+  min-height: calc(60vh - 3rem);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: var(--radius);
+  max-width: 700px;
+}
+
+.container h2 {
+  padding-bottom: 1rem;
+}
+
+/*
+=============== 
+    Body Background
+===============
+*/
+
+body {
+  height: 100vh;
+  background: url("https://source.unsplash.com/random/1920x1080") no-repeat
+    center center/cover;
+}
+
+/*
+=============== 
+    Body Overlay
+===============
+*/
+
+*/ .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/*
+=============== 
+    Flag Icons
+===============
+*/
+
+.usa-flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.br-flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+/*
+=============== 
+    Generated paragraph
+===============
+*/
+
+.message {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+/*
+=============== 
+    Preloader
+===============
+*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-primary-2);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+  transition: var(--transition);
+}
