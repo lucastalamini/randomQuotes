@@ -19,7 +19,7 @@ getQuotes().then((quotes) => {
   }
   let message = "";
   message += `"${quotes.quote}" <br><br><i>- ${quotes.author}</i>`;
-  console.log(quotes.author, quotes.quote);
+  // console.log(quotes.author, quotes.quote);
 
   document.querySelector(".message").innerHTML = message;
 });
